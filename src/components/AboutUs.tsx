@@ -14,11 +14,11 @@ export default function AboutUs() {
           <div className="lg:w-1/2">
             <div className="relative">
               <Image
-                src="/assets/about-us-team.jpg"
-                alt="Herman's Modern Bakery Team"
-                width={500}
-                height={400}
-                className="rounded-xl shadow-lg object-cover"
+                src="/assets/photos/celebrating-1.jpg"
+                alt="Herman's Modern Bakery 80th Anniversary Group Photo"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-2xl object-cover w-full h-[320px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] max-h-[80vh]"
               />
               <div className="absolute -bottom-4 -right-4 bg-[#F11A23] text-white px-6 py-3 rounded-lg shadow-lg">
                 <p className="text-lg font-bold font-dela-gothic-one">

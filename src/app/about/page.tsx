@@ -28,6 +28,17 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* 80th Anniversary Banner */}
+      <div className="max-w-3xl mx-auto mt-8 mb-12 px-4">
+        <a
+          href="/80th-anniversary"
+          className="block bg-gradient-to-br from-[#F11A23] to-[#D4151E] text-white text-xl md:text-2xl font-bold font-dela-gothic-one rounded-2xl shadow-lg px-8 py-6 text-center hover:scale-105 transition-transform duration-300 border-4 border-white"
+        >
+          🎉 Celebrating 80 Years! Click here to see our 80th Anniversary Page
+          🎉
+        </a>
+      </div>
+
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-16 lg:py-24">
         {/* History Section */}
@@ -257,12 +268,6 @@ export default function AboutPage() {
               <button className="bg-[#F11A23] hover:bg-[#D4151E] text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-300">
                 View Our Menu
               </button>
-              <a
-                href="/80th-anniversary"
-                className="bg-[#F11A23] hover:bg-[#D4151E] text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-300 flex items-center justify-center"
-              >
-                80th Anniversary
-              </a>
               <button className="border-2 border-[#F11A23] text-[#F11A23] hover:bg-[#F11A23] hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-300">
                 Place An Order
               </button>

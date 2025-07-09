@@ -62,15 +62,23 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl font-dela-gothic-one font-extrabold text-brand mb-4">
           Saipan&apos;s First And Finest
         </h1>
-        <p className="text-lg md:text-2xl text-gray-500 font-sans mb-8">
+        <p className="text-lg md:text-2xl font-sans mb-8 text-[#7C5B4A]">
           Baked with love, served with a smile.
         </p>
-        <a
-          href="/order"
-          className="inline-block px-10 py-4 bg-[#F11A23] hover:bg-[#D4151E] text-white text-lg font-bold font-dela-gothic-one rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
-        >
-          Order Now
-        </a>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/order"
+            className="inline-block px-10 py-4 bg-[#F11A23] hover:bg-[#D4151E] text-white text-lg font-bold font-dela-gothic-one rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
+            Place An Order
+          </a>
+          <a
+            href="/80th-anniversary"
+            className="inline-block px-10 py-4 bg-[#F11A23] hover:bg-[#D4151E] text-white text-lg font-bold font-dela-gothic-one rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
+            80th Anniversary
+          </a>
+        </div>
       </div>
     </section>
   );

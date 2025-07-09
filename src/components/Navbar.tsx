@@ -54,26 +54,64 @@ export default function Navbar() {
             ))}
           </div>
 
+          {/* Social Media & Contact Buttons */}
+          <div className="hidden lg:flex items-center space-x-3">
+            {/* Phone */}
+            <a
+              href="tel:+16702341726"
+              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+              aria-label="Call us"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.675 16.925l-4.8-2.05a2 2 0 0 0-2.35.45l-2.05 2.05a15.05 15.05 0 0 1-6.6-6.6l2.05-2.05a2 2 0 0 0 .45-2.35l-2.05-4.8A2 2 0 0 0 3.05 2H2A2 2 0 0 0 0 4c0 10.493 8.507 19 19 19a2 2 0 0 0 2-2v-1.05a2 2 0 0 0-1.325-1.925z" />
+              </svg>
+            </a>
+
+            {/* Email */}
+            <a
+              href="mailto:info@hermansmodernbakery.com"
+              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+              aria-label="Email us"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+            </a>
+
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/hermansmodernbakery"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+              aria-label="Facebook"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0" />
+              </svg>
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/hermansmodernbakery/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+              aria-label="Instagram"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+              </svg>
+            </a>
+          </div>
+
           {/* Order Button */}
           <div className="flex items-center space-x-4">
             <Link
               href="/order"
               className="hidden sm:inline-flex items-center px-6 py-3 bg-white text-[#F11A23] font-bold font-dela-gothic-one rounded-xl hover:bg-[#FCF4E0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              <svg
-                className="w-4 h-4 mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                />
-              </svg>
-              Order Now
+              Place An Order
             </Link>
 
             {/* Mobile Menu Button */}
@@ -121,12 +159,73 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
+
+              {/* Mobile Social Media & Contact */}
+              <div className="flex justify-center space-x-4 pt-4 border-t border-white/20">
+                <a
+                  href="tel:+16702341726"
+                  className="p-3 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+                  aria-label="Call us"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M22.675 16.925l-4.8-2.05a2 2 0 0 0-2.35.45l-2.05 2.05a15.05 15.05 0 0 1-6.6-6.6l2.05-2.05a2 2 0 0 0 .45-2.35l-2.05-4.8A2 2 0 0 0 3.05 2H2A2 2 0 0 0 0 4c0 10.493 8.507 19 19 19a2 2 0 0 0 2-2v-1.05a2 2 0 0 0-1.325-1.925z" />
+                  </svg>
+                </a>
+                <a
+                  href="mailto:info@hermansmodernbakery.com"
+                  className="p-3 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+                  aria-label="Email us"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.facebook.com/hermansmodernbakery"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+                  aria-label="Facebook"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com/hermansmodernbakery/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+                  aria-label="Instagram"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                  </svg>
+                </a>
+              </div>
+
               <Link
                 href="/order"
                 className="block mt-6 bg-white text-[#F11A23] font-bold font-dela-gothic-one py-3 px-6 rounded-xl text-center hover:bg-[#FCF4E0] transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Order Now
+                Place An Order
               </Link>
             </div>
           </div>

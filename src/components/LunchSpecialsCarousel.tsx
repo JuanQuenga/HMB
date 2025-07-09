@@ -264,7 +264,7 @@ export default function LunchSpecialsCarousel() {
 
         {/* Footer Note */}
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
+          <div className="inline-flex items-center gap-2  px-6 py-3 rounded-full ">
             <span className="text-gray-600 text-base italic font-medium">
               {note}
             </span>

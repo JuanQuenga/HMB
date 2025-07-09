@@ -30,37 +30,70 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-              {productCategories
-                .slice(0, 2)
-                .flatMap((cat) => cat.items.slice(0, 2))
-                .map((item) => (
-                  <Card
-                    key={item.name + item.size}
-                    className="bg-white/95 rounded-2xl shadow-lg hover:shadow-xl transition-transform hover:scale-[1.03]"
-                  >
-                    <div className="w-full h-40 bg-gray-100 rounded-t-2xl flex items-center justify-center mb-4">
-                      {/* Placeholder image, replace with real if available */}
-                      <span className="text-5xl" role="img" aria-label="bakery">
-                        🍞
-                      </span>
-                    </div>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-lg font-bold text-gray-900 truncate">
-                        {item.name}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      <div className="flex items-center justify-between">
-                        <span className="text-gray-500 text-sm font-light">
-                          {item.size}
-                        </span>
-                        <span className="font-bold text-[#F11A23] text-lg">
-                          ${item.price.toFixed(2)}
-                        </span>
+              {(() => {
+                const productPhotos = [
+                  "/assets/photos/sweetbread-1.jpg",
+                  "/assets/photos/sweetbread-2.jpg",
+                  "/assets/photos/sweetbread-3.jpg",
+                  "/assets/photos/sweetbread-4.jpg",
+                  "/assets/photos/cakes-1.jpg",
+                  "/assets/photos/cakes-2.jpg",
+                  "/assets/photos/cakes-3.jpg",
+                  "/assets/photos/cakes-4.jpg",
+                  "/assets/photos/pastries-1.jpg",
+                  "/assets/photos/pastries-2.jpg",
+                  "/assets/photos/pastries-3.jpg",
+                  "/assets/photos/pastries-4.jpg",
+                  "/assets/photos/cookies-1.jpg",
+                  "/assets/photos/cookies-2.jpg",
+                  "/assets/photos/cookies-3.jpg",
+                  "/assets/photos/cookies-4.jpg",
+                  "/assets/photos/buns-n-rolls-1.jpg",
+                  "/assets/photos/buns-n-rolls-2.jpg",
+                  "/assets/photos/buns-n-rolls-3.jpg",
+                  "/assets/photos/celebrating-1.jpg",
+                  "/assets/photos/cafe-1.jpg",
+                  "/assets/photos/cafe-2.jpg",
+                  "/assets/photos/cafe-3.jpg",
+                  "/assets/photos/cafe-4.jpg",
+                  "/assets/photos/anniversary-1.png",
+                  "/assets/photos/anniversary-2.png",
+                  "/assets/photos/anniversary-3.png",
+                  "/assets/photos/sweet-bread.jpg",
+                ];
+                return productCategories
+                  .slice(0, 2)
+                  .flatMap((cat) => cat.items.slice(0, 2))
+                  .map((item, idx) => (
+                    <Card
+                      key={item.name + item.size}
+                      className="bg-white/95 rounded-2xl shadow-lg hover:shadow-xl transition-transform hover:scale-[1.03]"
+                    >
+                      <div className="w-full h-40 bg-gray-100 rounded-t-2xl flex items-center justify-center mb-4 relative overflow-hidden">
+                        <img
+                          src={productPhotos[idx % productPhotos.length]}
+                          alt={item.name}
+                          className="object-cover w-full h-full"
+                        />
                       </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-lg font-bold text-gray-900 truncate">
+                          {item.name}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        <div className="flex items-center justify-between">
+                          <span className="text-gray-500 text-sm font-light">
+                            {item.size}
+                          </span>
+                          <span className="font-bold text-[#F11A23] text-lg">
+                            ${item.price.toFixed(2)}
+                          </span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ));
+              })()}
             </div>
             <div className="text-center">
               <Link

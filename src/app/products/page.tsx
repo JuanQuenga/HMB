@@ -3,32 +3,37 @@ import { useState } from "react";
 import { productCategories } from "@/data/products";
 import Image from "next/image";
 
-// Map category to photo filenames (add more as needed)
-const categoryPhotos: Record<string, string[]> = {
-  Bread: [
-    "/assets/photos/sweetbread-1.jpg",
-    "/assets/photos/sweetbread-2.jpg",
-    "/assets/photos/sweetbread-3.jpg",
-    "/assets/photos/sweetbread-4.jpg",
-  ],
-  "Buns & Rolls": [
-    "/assets/photos/buns-n-rolls-1.jpg",
-    "/assets/photos/buns-n-rolls-2.jpg",
-    "/assets/photos/buns-n-rolls-3.jpg",
-  ],
-  "Pastries & Rolls": [
-    "/assets/photos/pastries-1.jpg",
-    "/assets/photos/pastries-2.jpg",
-    "/assets/photos/pastries-3.jpg",
-  ],
-  Cookies: [
-    "/assets/photos/cookies-1.jpg",
-    "/assets/photos/cookies-2.jpg",
-    "/assets/photos/cookies-3.jpg",
-    "/assets/photos/cookies-4.jpg",
-  ],
-  // Add more mappings as needed
-};
+// All available product photos from /assets/photos
+const allProductPhotos = [
+  "/assets/photos/sweetbread-1.jpg",
+  "/assets/photos/sweetbread-2.jpg",
+  "/assets/photos/sweetbread-3.jpg",
+  "/assets/photos/sweetbread-4.jpg",
+  "/assets/photos/cakes-1.jpg",
+  "/assets/photos/cakes-2.jpg",
+  "/assets/photos/cakes-3.jpg",
+  "/assets/photos/cakes-4.jpg",
+  "/assets/photos/pastries-1.jpg",
+  "/assets/photos/pastries-2.jpg",
+  "/assets/photos/pastries-3.jpg",
+  "/assets/photos/pastries-4.jpg",
+  "/assets/photos/cookies-1.jpg",
+  "/assets/photos/cookies-2.jpg",
+  "/assets/photos/cookies-3.jpg",
+  "/assets/photos/cookies-4.jpg",
+  "/assets/photos/buns-n-rolls-1.jpg",
+  "/assets/photos/buns-n-rolls-2.jpg",
+  "/assets/photos/buns-n-rolls-3.jpg",
+  "/assets/photos/celebrating-1.jpg",
+  "/assets/photos/cafe-1.jpg",
+  "/assets/photos/cafe-2.jpg",
+  "/assets/photos/cafe-3.jpg",
+  "/assets/photos/cafe-4.jpg",
+  "/assets/photos/anniversary-1.png",
+  "/assets/photos/anniversary-2.png",
+  "/assets/photos/anniversary-3.png",
+  "/assets/photos/sweet-bread.jpg",
+];
 
 export default function ProductsPage() {
   const [activeCategory, setActiveCategory] = useState(
@@ -72,10 +77,8 @@ export default function ProductsPage() {
           <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {activeCat.items.map((item, idx) => {
-                // Try to get a photo for this category, rotate if more than one
-                const photos = categoryPhotos[activeCat.category] || [];
-                const photo =
-                  photos.length > 0 ? photos[idx % photos.length] : null;
+                // Use a real product photo, cycling through all available
+                const photo = allProductPhotos[idx % allProductPhotos.length];
                 return (
                   <div
                     key={item.name + item.size}
