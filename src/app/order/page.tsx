@@ -44,10 +44,10 @@ export default function OrderPage() {
 
       {/* Order Form Section */}
       <section className="py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8">
+        <div className="max-w-4xl mx-auto px-2 lg:px-8">
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
             {/* Form Header */}
-            <div className="bg-gradient-to-r from-[#F11A23] to-[#D4151E] p-8 text-white">
+            <div className="bg-gradient-to-r from-[#F11A23] to-[#D4151E] p-6 lg:p-8 text-white">
               <h2 className="text-2xl lg:text-3xl font-dela-gothic-one font-bold mb-2">
                 Order Details
               </h2>
@@ -58,7 +58,7 @@ export default function OrderPage() {
             </div>
 
             {/* Form Content */}
-            <div className="p-8 lg:p-12">
+            <div className="p-2 lg:p-12">
               <form className="space-y-8">
                 {/* Customer Info */}
                 <div className="bg-gray-50 rounded-2xl p-6">

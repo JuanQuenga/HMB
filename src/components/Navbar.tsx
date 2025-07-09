@@ -30,7 +30,8 @@ export default function Navbar() {
               />
               <div className="absolute inset-0 "></div>
             </div>
-            <div className="ml-3 hidden sm:block transition-transform duration-300 group-hover:scale-110">
+            {/* <div className="ml-3 hidden sm:block transition-transform duration-300 group-hover:scale-110"> */}
+            <div className="ml-3  transition-transform duration-300 group-hover:scale-110">
               <h1 className="text-white font-dela-gothic-one text-lg lg:text-xl font-bold">
                 Herman&apos;s
               </h1>
@@ -147,7 +148,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-white/20 bg-gradient-to-b from-[#D4151E] to-[#F11A23]">
+          <div className="lg:hidden border-t border-white/20">
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
                 <Link

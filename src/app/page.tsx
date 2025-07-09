@@ -51,15 +51,10 @@ export default function Home() {
                   "/assets/photos/buns-n-rolls-1.jpg",
                   "/assets/photos/buns-n-rolls-2.jpg",
                   "/assets/photos/buns-n-rolls-3.jpg",
-                  "/assets/photos/celebrating-1.jpg",
                   "/assets/photos/cafe-1.jpg",
                   "/assets/photos/cafe-2.jpg",
                   "/assets/photos/cafe-3.jpg",
                   "/assets/photos/cafe-4.jpg",
-                  "/assets/photos/anniversary-1.png",
-                  "/assets/photos/anniversary-2.png",
-                  "/assets/photos/anniversary-3.png",
-                  "/assets/photos/sweet-bread.jpg",
                 ];
                 return productCategories
                   .slice(0, 2)
