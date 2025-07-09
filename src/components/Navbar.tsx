@@ -28,9 +28,9 @@ export default function Navbar() {
                 className="transition-transform duration-300 group-hover:scale-110"
                 priority
               />
-              <div className="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 "></div>
             </div>
-            <div className="ml-3 hidden sm:block">
+            <div className="ml-3 hidden sm:block transition-transform duration-300 group-hover:scale-110">
               <h1 className="text-white font-dela-gothic-one text-lg lg:text-xl font-bold">
                 Herman&apos;s
               </h1>
@@ -59,7 +59,7 @@ export default function Navbar() {
             {/* Phone */}
             <a
               href="tel:+16702341726"
-              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
               aria-label="Call us"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -70,7 +70,7 @@ export default function Navbar() {
             {/* Email */}
             <a
               href="mailto:info@hermansmodernbakery.com"
-              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
               aria-label="Email us"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -83,7 +83,7 @@ export default function Navbar() {
               href="https://www.facebook.com/hermansmodernbakery"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
               aria-label="Facebook"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -96,7 +96,7 @@ export default function Navbar() {
               href="https://www.instagram.com/hermansmodernbakery/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
               aria-label="Instagram"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

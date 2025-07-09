@@ -79,9 +79,9 @@ export default function FamilyPage() {
               className="mx-auto mb-8"
             />
             <h1 className="text-5xl lg:text-7xl font-dela-gothic-one text-white font-extrabold mb-6">
-              The HERMAN&apos;S Family
+              The Herman Family
             </h1>
-            <p className="text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl lg:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
               Herman&apos;s Modern Bakery is more than just a place to find
               delicious baked goods; it&apos;s a cornerstone of the Saipan
               community, founded and lovingly operated by the Herman family. For
