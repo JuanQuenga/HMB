@@ -6,6 +6,8 @@ const footerLinks = [
   { label: "Products", href: "/products" },
   { label: "Tan Marikita's Café", href: "/cafe" },
   { label: "Order", href: "/order" },
+  { label: "80th Anniversary", href: "/80th-anniversary" },
+  { label: "Family", href: "/family" },
 ];
 
 export default function Footer() {
