@@ -2,7 +2,6 @@ import Hero from "@/components/Hero";
 import FoodItems from "@/components/FoodItems";
 import BakeryMap from "@/components/BakeryMap";
 import AboutUs from "@/components/AboutUs";
-import CustomerFeedback from "@/components/CustomerFeedback";
 import { productCategories } from "@/data/products";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Link from "next/link";
@@ -110,7 +109,43 @@ export default function Home() {
           id="feedback"
           className="w-full bg-gradient-to-b from-white to-[#FCF4E0] py-8"
         >
-          <CustomerFeedback />
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-5xl font-dela-gothic-one text-[#F11A23] mb-4">
+                80th Anniversary Highlights
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#F11A23] to-[#D4151E] mx-auto mb-6 rounded-full" />
+            </div>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Text/Link Left */}
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl font-dela-gothic-one text-[#F11A23] mb-2">
+                  Celebrating 80 Years of Community
+                </h3>
+                <p className="text-gray-700 text-lg mb-4 max-w-xl md:mx-0 mx-auto">
+                  Thank you for being part of our story! Watch highlights from
+                  our 80th Anniversary and see how Herman&apos;s has grown with
+                  Saipan.
+                </p>
+                <a
+                  href="/80th-anniversary"
+                  className="inline-block bg-[#F11A23] text-white font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-[#D4151E] transition-colors text-lg font-dela-gothic-one"
+                >
+                  Visit the 80th Anniversary Page
+                </a>
+              </div>
+              {/* Video Right */}
+              <div className="flex-1 w-full max-w-lg aspect-video rounded-2xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/qGP__9OMg88?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=qGP__9OMg88"
+                  title="Herman's 80th Anniversary Video"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>

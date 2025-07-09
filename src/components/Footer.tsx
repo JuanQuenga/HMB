@@ -53,6 +53,21 @@ export default function Footer() {
             </nav>
           </div>
 
+          {/* Customer Feedback */}
+          <div className="lg:col-span-1">
+            <h4 className="text-lg font-dela-gothic-one font-bold mb-4 text-center lg:text-left">
+              Customer Feedback
+            </h4>
+            <div className="pb-6">
+              <a
+                href="/feedback"
+                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+              >
+                Customer Feedback
+              </a>
+            </div>
+          </div>
+
           {/* Contact Information */}
           <div className="lg:col-span-1">
             <h4 className="text-lg font-dela-gothic-one font-bold mb-4 text-center lg:text-left">

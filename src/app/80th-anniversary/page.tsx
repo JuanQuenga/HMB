@@ -36,63 +36,56 @@ export default function Anniversary80Page() {
   return (
     <div className="min-h-screen bg-[#FCF4E0]">
       {/* Hero Section */}
-      <section className="relative w-full bg-gradient-to-br from-[#F11A23] to-[#D4151E] py-20 lg:py-32 text-center">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-4xl mx-auto px-4 lg:px-8 z-10">
-          <div className="flex justify-center mb-8">
+      <section className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-[45vh] min-h-[320px] md:h-[60vh] md:min-h-[400px] flex flex-col justify-center items-center overflow-hidden">
+        {/* YouTube Video Background */}
+        <div className="absolute w-full h-full inset-0 z-0 pointer-events-none overflow-hidden">
+          <div className="absolute inset-0 w-full h-full">
+            <div className="w-full h-full absolute top-0 left-0">
+              <iframe
+                src="https://www.youtube.com/embed/qGP__9OMg88?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&fs=0&loop=1&playlist=qGP__9OMg88"
+                title="Herman's 80th Anniversary Video"
+                allow="autoplay; encrypted-media"
+                allowFullScreen={false}
+                className="absolute top-1/2 left-1/2 min-w-[120vw] min-h-[120vh] w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover border-0"
+                style={{
+                  aspectRatio: "16/9",
+                  width: "120vw",
+                  height: "120vh",
+                  minWidth: "100vw",
+                  minHeight: "100%",
+                  maxWidth: "none",
+                  maxHeight: "none",
+                }}
+              ></iframe>
+            </div>
+          </div>
+          <div className="absolute inset-0 bg-black/50 md:bg-black/40" />
+        </div>
+        {/* Hero Content */}
+        <div className="relative z-10 flex flex-col items-center w-full px-4 py-8 md:py-0 text-center text-white">
+          <div className="flex justify-center mb-6 md:mb-8">
             <div
-              className="bg-white rounded-full p-4 shadow-2xl flex items-center justify-center"
-              style={{ width: 180, height: 180 }}
+              className="bg-white rounded-full p-3 md:p-4 shadow-2xl flex items-center justify-center"
+              style={{ width: 110, height: 110 }}
             >
               <Image
                 src="/assets/logo-anniversary.png"
                 alt="Herman's Modern Bakery 80th Anniversary Logo"
-                width={150}
-                height={150}
+                width={90}
+                height={90}
                 className="object-contain"
                 priority
               />
             </div>
           </div>
-          <h1 className="text-5xl lg:text-7xl font-dela-gothic-one text-white font-extrabold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-dela-gothic-one text-white font-extrabold mb-4 md:mb-6 drop-shadow-lg">
             Celebrating 80 Years
           </h1>
-          <p className="text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-xl md:max-w-2xl mx-auto leading-relaxed drop-shadow">
             Since 1944, Herman&apos;s Modern Bakery has been a cherished name in
             our community, serving up fresh, delicious bread, pastries, cookies,
             and cakes for generations.
           </p>
-        </div>
-      </section>
-
-      {/* Anniversary Images Grid Section */}
-      <section className="bg-[#FCF4E0] py-12">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-2">
-            {anniversaryImages.map((image, index) => (
-              <div
-                key={index}
-                className="cursor-pointer transform transition-transform hover:scale-105 group"
-                onClick={() => handleImageClick(image)}
-              >
-                <div className="relative">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={400}
-                    height={400}
-                    className="rounded-2xl shadow-2xl object-cover w-full h-72 md:h-64"
-                    priority={index === 0}
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors rounded-2xl flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity text-white text-lg font-semibold">
-                      Click to enlarge
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -158,6 +151,37 @@ export default function Anniversary80Page() {
             bakery&apos;s history. We look forward to many more years of
             bringing joy to our community, one delicious treat at a time.&quot;
           </p>
+        </section>
+
+        {/* Anniversary Images Grid Section - moved here */}
+        <section className="bg-[#FCF4E0] py-12">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-2">
+              {anniversaryImages.map((image, index) => (
+                <div
+                  key={index}
+                  className="cursor-pointer transform transition-transform hover:scale-105 group"
+                  onClick={() => handleImageClick(image)}
+                >
+                  <div className="relative">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={400}
+                      height={400}
+                      className="rounded-2xl shadow-2xl object-cover w-full h-72 md:h-64"
+                      priority={index === 0}
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors rounded-2xl flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity text-white text-lg font-semibold">
+                        Click to enlarge
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         <div className="text-center mt-12">

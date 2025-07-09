@@ -216,7 +216,8 @@ export const cafeMenu = [
     ],
   },
   {
-    section: "Ala Cart - Served with Steamed rice, buttered corn, or salad",
+    section: "Ala Carte",
+    description: "Served with Steamed rice, buttered corn, or salad",
     items: [
       { name: "Loco Moco", price: 14.25 },
       { name: "Fried Chicken", price: 11.5 },
