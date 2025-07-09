@@ -1,0 +1,66 @@
+{
+  "title": "Tan Marikita's Café",
+  "subtitle": "Weekly Lunch Specials",
+  "availability": "Available Monday thru Friday 10:30am – 2:00pm.",
+  "date": "June 17th – 21st 2024",
+  "price": "All for $12.00",
+  "note": "*Menu items are subject to change without notice*",
+  "days": [
+    {
+      "day": "Monday",
+      "theme": "Juicy",
+      "price": 12,
+      "items": [
+        "Baked Honey Mustard Chicken",
+        "Meatballs w/Gravy",
+        "Steamed Green Beans",
+        "Cream of Mushroom Soup"
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "theme": "Tangy",
+      "price": 15,
+      "items": [
+        "Sweet & Sour Shrimp",
+        "Beef w/Broccoli",
+        "Garlic Kangkong",
+        "Egg-Drop Soup"
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "theme": "Easy Going",
+      "price": 12,
+      "items": [
+        "Tonteki Pork Steak",
+        "Crispy Chicken Teriyaki",
+        "Cucumber w/Ginger Salad",
+        "Miso Soup"
+      ]
+    },
+    {
+      "day": "Thursday",
+      "theme": "Fast & Slow",
+      "price": 12,
+      "items": [
+        "Fish Escabeche w/Titiyas",
+        "Chamorro Bistek",
+        "Steamed Okra",
+        "Corn Soup"
+      ]
+    },
+    {
+      "day": "Friday",
+      "theme": "Fun & Wild",
+      "price": 11,
+      "items": [
+        "Red Rice",
+        "Spicy Shrimp Sushi",
+        "BBQ Link Sausage",
+        "Charakilis Soup"
+      ]
+    }
+  ],
+  "includes": ["rice", "soup", "salad", "iced tea"]
+}
