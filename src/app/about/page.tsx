@@ -5,34 +5,37 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#FCF4E0]">
       {/* Hero Section */}
-      <section className="relative w-full bg-gradient-to-br from-[#F11A23] to-[#D4151E] py-20 lg:py-32">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center">
-            <Image
-              src="/assets/logo-white.svg"
-              alt="Herman's Modern Bakery Logo"
-              width={120}
-              height={120}
-              className="mx-auto mb-8"
-            />
-            <h1 className="text-5xl lg:text-7xl font-dela-gothic-one text-white font-extrabold mb-6">
-              Our Story
-            </h1>
-            <p className="text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              From humble beginnings in 1944 to Saipan&apos;s premier bakery,
-              we&apos;ve been serving the community with love, tradition, and
-              the finest baked goods.
-            </p>
+      <section className="relative w-full bg-gradient-to-br from-[#F11A23] to-[#D4151E] py-10 sm:py-20 lg:py-32 text-center overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-[url('/assets/bannerBackground.png')] bg-cover bg-center opacity-10"></div>
+        <div className="relative max-w-4xl mx-auto px-2 sm:px-4 lg:px-8 z-10">
+          <div className="flex justify-center mb-6 sm:mb-8">
+            <div className="bg-white rounded-full p-3 sm:p-4 shadow-2xl flex items-center justify-center">
+              <Image
+                src="/assets/logo-white.svg"
+                alt="Herman's Modern Bakery Logo"
+                width={48}
+                height={48}
+                className="w-8 h-8 sm:w-12 sm:h-12"
+              />
+            </div>
           </div>
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-dela-gothic-one text-white font-extrabold mb-4 sm:mb-6">
+            Our Story
+          </h1>
+          <p className="text-base sm:text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+            From humble beginnings in 1944 to Saipan&apos;s premier bakery,
+            we&apos;ve been serving the community with love, tradition, and the
+            finest baked goods.
+          </p>
         </div>
       </section>
 
       {/* 80th Anniversary Banner */}
-      <div className="max-w-3xl mx-auto mt-8 mb-12 px-4">
+      <div className="max-w-3xl mx-auto mt-6 sm:mt-8 mb-8 sm:mb-12 px-2 sm:px-4">
         <a
           href="/80th-anniversary"
-          className="block bg-gradient-to-br from-[#F11A23] to-[#D4151E] text-white text-xl md:text-2xl font-bold font-dela-gothic-one rounded-2xl shadow-lg px-8 py-6 text-center hover:scale-105 transition-transform duration-300 border-4 border-white"
+          className="block bg-gradient-to-br from-[#F11A23] to-[#D4151E] text-white text-base sm:text-xl md:text-2xl font-bold font-dela-gothic-one rounded-2xl shadow-lg px-4 sm:px-8 py-4 sm:py-6 text-center hover:scale-105 transition-transform duration-300 border-4 border-white"
         >
           🎉 Celebrating 80 Years! Click here to see our 80th Anniversary Page
           🎉
@@ -40,15 +43,15 @@ export default function AboutPage() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-8 sm:py-16 lg:py-24">
         {/* History Section */}
-        <section className="mb-20 lg:mb-32">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-dela-gothic-one text-[#F11A23] font-bold">
+        <section className="mb-12 sm:mb-20 lg:mb-32">
+          <div className="grid gap-8 sm:gap-12 lg:gap-20 items-center lg:grid-cols-2">
+            <div className="space-y-4 sm:space-y-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-dela-gothic-one text-[#F11A23] font-bold">
                 A Legacy of Excellence
               </h2>
-              <div className="space-y-4 text-lg lg:text-xl text-gray-700 leading-relaxed">
+              <div className="space-y-2 sm:space-y-4 text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed">
                 <p>{cafeInfo.intro}</p>
               </div>
             </div>
@@ -61,8 +64,8 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-[#F11A23] text-white px-8 py-4 rounded-xl shadow-lg">
-                <p className="text-xl font-bold font-dela-gothic-one">
+              <div className="absolute -bottom-3 sm:-bottom-6 -left-3 sm:-left-6 bg-[#F11A23] text-white px-4 sm:px-8 py-2 sm:py-4 rounded-xl shadow-lg">
+                <p className="text-base sm:text-xl font-bold font-dela-gothic-one">
                   Est. 1944
                 </p>
               </div>
@@ -71,8 +74,8 @@ export default function AboutPage() {
         </section>
 
         {/* Tan Marikita Section */}
-        <section className="mb-20 lg:mb-32">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <section className="mb-12 sm:mb-20 lg:mb-32">
+          <div className="grid gap-8 sm:gap-12 lg:gap-20 items-center lg:grid-cols-2">
             <div className="relative order-2 lg:order-1">
               <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
                 <Image
@@ -82,17 +85,17 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -top-6 -right-6 bg-white text-[#F11A23] px-6 py-3 rounded-xl shadow-lg border-2 border-[#F11A23]">
-                <p className="text-lg font-bold font-dela-gothic-one">
+              <div className="absolute -top-3 sm:-top-6 -right-3 sm:-right-6 bg-white text-[#F11A23] px-3 sm:px-6 py-1.5 sm:py-3 rounded-xl shadow-lg border-2 border-[#F11A23]">
+                <p className="text-base sm:text-lg font-bold font-dela-gothic-one">
                   Tan Marikita Cafe
                 </p>
               </div>
             </div>
-            <div className="space-y-6 order-1 lg:order-2">
-              <h2 className="text-3xl lg:text-4xl font-dela-gothic-one text-[#F11A23] font-bold">
+            <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-dela-gothic-one text-[#F11A23] font-bold">
                 Tan Marikita&apos;s Legacy
               </h2>
-              <div className="space-y-4 text-lg lg:text-xl text-gray-700 leading-relaxed">
+              <div className="space-y-2 sm:space-y-4 text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed">
                 <p>{cafeInfo.about}</p>
               </div>
             </div>
@@ -100,52 +103,58 @@ export default function AboutPage() {
         </section>
 
         {/* Stats Section */}
-        <section className="mb-20 lg:mb-32">
-          <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12">
-            <h2 className="text-3xl lg:text-4xl font-dela-gothic-one text-[#F11A23] font-bold text-center mb-12">
+        <section className="mb-12 sm:mb-20 lg:mb-32">
+          <div className="bg-white rounded-3xl shadow-xl p-4 sm:p-8 lg:p-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-dela-gothic-one text-[#F11A23] font-bold text-center mb-6 sm:mb-12">
               By The Numbers
             </h2>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-[#F11A23] font-dela-gothic-one mb-2">
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#F11A23] font-dela-gothic-one mb-1 sm:mb-2">
                   80+
                 </div>
-                <div className="text-gray-600 font-medium">
+                <div className="text-gray-600 font-medium text-xs sm:text-base">
                   Years of Service
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-[#F11A23] font-dela-gothic-one mb-2">
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#F11A23] font-dela-gothic-one mb-1 sm:mb-2">
                   1000+
                 </div>
-                <div className="text-gray-600 font-medium">Happy Customers</div>
+                <div className="text-gray-600 font-medium text-xs sm:text-base">
+                  Happy Customers
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-[#F11A23] font-dela-gothic-one mb-2">
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#F11A23] font-dela-gothic-one mb-1 sm:mb-2">
                   50+
                 </div>
-                <div className="text-gray-600 font-medium">Menu Items</div>
+                <div className="text-gray-600 font-medium text-xs sm:text-base">
+                  Menu Items
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-[#F11A23] font-dela-gothic-one mb-2">
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#F11A23] font-dela-gothic-one mb-1 sm:mb-2">
                   24/7
                 </div>
-                <div className="text-gray-600 font-medium">Fresh Baking</div>
+                <div className="text-gray-600 font-medium text-xs sm:text-base">
+                  Fresh Baking
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="mb-20 lg:mb-32">
-          <div className="bg-gradient-to-br from-[#F11A23] to-[#D4151E] rounded-3xl shadow-xl p-8 lg:p-12 text-white">
-            <h2 className="text-3xl lg:text-4xl font-dela-gothic-one font-bold text-center mb-12">
+        <section className="mb-12 sm:mb-20 lg:mb-32">
+          <div className="bg-gradient-to-br from-[#F11A23] to-[#D4151E] rounded-3xl shadow-xl p-4 sm:p-8 lg:p-12 text-white">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-dela-gothic-one font-bold text-center mb-6 sm:mb-12">
               Visit Us Today
             </h2>
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="bg-white/20 p-3 rounded-xl">
+            <div className="grid gap-4 sm:gap-8 lg:grid-cols-2 lg:gap-16">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-start gap-2 sm:gap-4">
+                  <div className="bg-white/20 p-2 sm:p-3 rounded-xl">
                     <svg
                       className="w-6 h-6"
                       fill="none"
@@ -167,8 +176,12 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Address</h3>
-                    <p className="text-white/90">{cafeInfo.address}</p>
+                    <h3 className="font-bold text-base sm:text-lg mb-0.5 sm:mb-1">
+                      Address
+                    </h3>
+                    <p className="text-white/90 text-xs sm:text-base">
+                      {cafeInfo.address}
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
