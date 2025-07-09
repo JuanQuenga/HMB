@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import cafeData from "@/data/cafe.json";
 import { ChevronDown, ChevronUp, Clock } from "lucide-react";
 
@@ -29,6 +29,15 @@ export default function LunchSpecialsCarousel() {
   ];
   const todayName = weekdayNames[todayIdx];
 
+  // Auto-open current day on mobile when component mounts
+  useEffect(() => {
+    // Check if we're on mobile (you can adjust this breakpoint as needed)
+    const isMobile = window.innerWidth < 1024; // lg breakpoint
+    if (isMobile) {
+      setOpenDay(todayName);
+    }
+  }, [todayName]);
+
   const toggleDay = (day: string) => {
     setOpenDay(openDay === day ? null : day);
   };
@@ -42,22 +51,39 @@ export default function LunchSpecialsCarousel() {
             {title}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#F11A23] to-[#D4151E] mx-auto mb-6 rounded-full" />
-          <div className="mb-4">
-            <span className="inline-flex items-center px-6 py-2 bg-[#F11A23] text-white font-bold font-dela-gothic-one rounded-xl shadow-lg text-lg">
-              $12
-            </span>
-          </div>
           <p className="text-xl lg:text-2xl font-bold text-gray-800 mb-3">
             {subtitle}
           </p>
 
-          <div className="flex items-center justify-center gap-4 text-gray-600 text-lg">
+          {/* Desktop Layout - All on same row */}
+          <div className="hidden lg:flex items-center justify-center gap-6 text-gray-600 text-lg">
+            <span className="inline-flex items-center px-6 py-2 bg-[#F11A23] text-white font-bold font-dela-gothic-one rounded-xl shadow-lg text-lg">
+              $12
+            </span>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5 text-[#F11A23]" />
               <span className="font-medium">10:30am – 2:00pm</span>
             </div>
             <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
             <span className="font-medium">Includes {includes.join(", ")}</span>
+          </div>
+
+          {/* Mobile Layout - Price and time on same row, includes below */}
+          <div className="lg:hidden">
+            <div className="flex items-center justify-center gap-4 text-gray-600 text-lg mb-3">
+              <span className="inline-flex items-center px-6 py-2 bg-[#F11A23] text-white font-bold font-dela-gothic-one rounded-xl shadow-lg text-lg">
+                $12
+              </span>
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-[#F11A23]" />
+                <span className="font-medium">10:30am – 2:00pm</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <span className="text-gray-600 text-lg font-medium">
+                Includes {includes.join(", ")}
+              </span>
+            </div>
           </div>
         </div>
 

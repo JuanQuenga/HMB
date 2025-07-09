@@ -23,8 +23,8 @@ export default function BakeryMap() {
 
   const lat = 15.14305786427874;
   const lng = 145.7304914448438;
-  const oldAddress =
-    "5040 Chalan Tun Herman Pan PO Box 500002 96950 Saipan, Northern Mariana Islands";
+  const address =
+    "5040 Chalan Tun Herman Pan, Saipan, Northern Mariana Islands 96950";
 
   // Ensure we're on the client side
   useEffect(() => {
@@ -96,8 +96,8 @@ export default function BakeryMap() {
     { days: "Sun", hours: "Closed" },
   ];
 
-  const appleMapsUrl = `https://maps.apple.com/?q=${encodeURIComponent(oldAddress)}`;
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(oldAddress)}`;
+  const appleMapsUrl = `https://maps.apple.com/?q=${encodeURIComponent(address)}`;
+  const googleMapsUrl = "https://maps.app.google.com/J2yJtKyHPNT1KL6f8";
 
   return (
     <section className="w-full py-16">
@@ -126,7 +126,7 @@ export default function BakeryMap() {
               Our Location
             </div>
             <div className="text-2xl font-bold text-[#F11A23] mb-4 font-sans break-words">
-              {oldAddress}
+              {address}
             </div>
             <div className="text-base text-gray-500 mb-2 font-sans">
               Business Hours
