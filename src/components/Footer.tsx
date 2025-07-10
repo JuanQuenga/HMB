@@ -12,6 +12,7 @@ const extraLinks = [
   { label: "80th Anniversary", href: "/80th-anniversary" },
   { label: "Our History", href: "/history" },
   { label: "Our Family", href: "/family" },
+  { label: "Customer Feedback", href: "/feedback" },
 ];
 
 export default function Footer() {
@@ -57,18 +58,12 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Customer Feedback */}
+          {/* Other Links */}
           <div className="lg:col-span-1">
             <h4 className="text-lg font-dela-gothic-one font-bold mb-4 text-center lg:text-left">
-              Customer Feedback
+              Other Links
             </h4>
             <div className="pb-6">
-              <a
-                href="/feedback"
-                className="text-sm leading-6 text-white text-center lg:text-left block hover:text-white/80 transition-colors duration-300"
-              >
-                Customer Feedback
-              </a>
               <nav className="flex flex-col space-y-2 mt-4">
                 {extraLinks.map((link) => (
                   <Link

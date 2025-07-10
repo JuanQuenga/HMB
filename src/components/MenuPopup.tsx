@@ -23,7 +23,15 @@ export default function MenuPopup({ isOpen, onClose }: MenuPopupProps) {
             className="fixed inset-0 z-[100] bg-black"
             onClick={onClose}
           />
-          {/* Bottom Sheet */}
+          {/* Close Button - above the card, in the overlay */}
+          <button
+            className="fixed top-6 left-1/2 -translate-x-1/2 z-[120] w-14 h-14 flex items-center justify-center rounded-full bg-[#F11A23] text-white text-4xl shadow-xl border-4 border-white active:scale-95 transition-transform"
+            onClick={onClose}
+            aria-label="Close"
+          >
+            ×
+          </button>
+          {/* Popup Card */}
           <motion.div
             key="sheet"
             initial={{ y: "100%" }}
@@ -36,23 +44,15 @@ export default function MenuPopup({ isOpen, onClose }: MenuPopupProps) {
             onDragEnd={(e, info) => {
               if (info.offset.y > 80) onClose();
             }}
-            className="fixed inset-x-0 bottom-0 z-[110] bg-white rounded-t-3xl shadow-2xl pt-7 pb-4 px-2 max-h-[85vh] touch-pan-y overflow-x-hidden max-w-full"
+            className="fixed inset-x-0 bottom-0 z-[110] bg-white rounded-t-3xl shadow-2xl mt-8 pb-4 px-2 max-h-[85vh] touch-pan-y overflow-x-hidden max-w-full"
             style={{ touchAction: "pan-y" }}
           >
             {/* Drag Handle */}
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1.5 rounded-full bg-gray-300 mb-2" />
-            {/* Large Floating Close Button */}
-            <button
-              className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 flex items-center justify-center rounded-full bg-[#F11A23] text-white text-4xl shadow-xl border-4 border-white active:scale-95 transition-transform z-[120]"
-              onClick={onClose}
-              aria-label="Close"
-            >
-              ×
-            </button>
+            <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1.5 rounded-full bg-red-300 mb-2" />
             <div className="overflow-y-auto max-h-[calc(85vh-80px)] pt-4 md:pt-8 overflow-x-hidden max-w-full">
               <Tabs defaultValue={cafeMenu[0].section} className="w-full">
-                <div className="sticky top-0 md:top-[64px] z-50 bg-white px-4 py-4 rounded-2xl shadow-md -mx-2">
-                  <TabsList className="w-full flex flex-wrap gap-2 justify-center bg-transparent">
+                <div className="sticky -top-4 md:top-[64px] z-50 px-0 flex -mx-2  ">
+                  <TabsList className="w-full flex flex-wrap gap-2 justify-center bg-white shadow-md p-2 h-full">
                     {cafeMenu.map((section) => (
                       <TabsTrigger
                         key={section.section}
@@ -68,14 +68,14 @@ export default function MenuPopup({ isOpen, onClose }: MenuPopupProps) {
                     ))}
                   </TabsList>
                 </div>
-                <div className="pointer-events-none absolute left-0 right-0 top-full h-8 z-10 bg-gradient-to-b from-[#F1F1F1] to-transparent" />
+                <div className="pointer-events-none absolute left-0 right-0 top-full h-8 z-10 " />
                 {cafeMenu.map((section) => (
                   <TabsContent
                     key={section.section}
                     value={section.section}
-                    className="w-full pt-12"
+                    className="w-full pt-4"
                   >
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-3 pt=1">
                       {/* If Ala Carte, show the Served with text at the top */}
                       {section.section.startsWith("Ala Cart") && (
                         <div className="mb-2 text-gray-600 font-semibold text-sm text-center italic">
