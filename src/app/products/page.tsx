@@ -61,7 +61,7 @@ export default function ProductsPage() {
       {/* Hero Section */}
       <section className="relative w-full bg-gradient-to-br from-[#F11A23] to-[#D4151E] py-6 sm:py-10 lg:py-20 text-center overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
-        <div className="absolute inset-0 bg-[url('/assets/bannerBackground.png')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/assets/bannerBackground.png')] bg-cover bg-center opacity-10 bg-[#FCF4E0]"></div>
         <div className="relative max-w-4xl mx-auto px-4 lg:px-8 z-10">
           <div className="flex justify-center mb-4 sm:mb-8">
             <div className="bg-white rounded-full p-3 sm:p-4 shadow-2xl flex items-center justify-center">
