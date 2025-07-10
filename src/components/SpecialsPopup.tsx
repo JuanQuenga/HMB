@@ -35,22 +35,22 @@ export default function SpecialsPopup({ isOpen, onClose }: SpecialsPopupProps) {
             onDragEnd={(e, info) => {
               if (info.offset.y > 80) onClose();
             }}
-            className="fixed inset-x-0 bottom-0 z-[110] bg-white rounded-t-3xl shadow-2xl pt-7 pb-4 px-2 max-h-[85vh] touch-pan-y"
+            className="fixed inset-x-0 bottom-0 z-[110] bg-white rounded-t-3xl shadow-2xl pb-4 px-2  touch-pan-y"
             style={{ touchAction: "pan-y" }}
           >
             {/* Drag Handle */}
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1.5 rounded-full bg-gray-300 mb-2" />
-            {/* Large Floating Close Button */}
+            <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1.5 rounded-full bg-red-300 mb-2" />
+            {/* Close Button - Bottom Bar */}
             <button
-              className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 flex items-center justify-center rounded-full bg-[#F11A23] text-white text-4xl shadow-xl border-4 border-white active:scale-95 transition-transform z-[120]"
+              className="absolute bottom-2 left-2 right-2 py-1 flex items-center justify-center bg-[#F11A23] text-white font-bold text-base shadow-[0_-4px_12px_-2px_rgba(0,0,0,0.3)] active:scale-95 transition-transform z-[120] rounded-lg"
               onClick={onClose}
               aria-label="Close"
             >
-              ×
+              CLOSE
             </button>
             <div className="overflow-y-auto max-h-[calc(85vh-80px)] px-1">
               <div className="pt-8">
-                <h2 className="text-2xl font-dela-gothic-one text-[#F11A23] mb-6 text-center">
+                <h2 className="text-2xl font-dela-gothic-one text-[#F11A23]  text-center">
                   Lunch Specials
                 </h2>
                 <LunchSpecials forceMobile={true} />

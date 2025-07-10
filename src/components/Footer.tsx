@@ -17,7 +17,7 @@ const extraLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-br from-[#F11A23] to-[#D4151E] text-white">
+    <footer className="w-full bg-gradient-to-br from-[#E0151D] to-[#B81219] text-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">

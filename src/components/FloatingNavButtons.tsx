@@ -1,5 +1,5 @@
 "use client";
-import { Star, Utensils } from "lucide-react";
+import { Calendar, Utensils } from "lucide-react";
 
 interface FloatingNavButtonsProps {
   onSpecialsClick: () => void;
@@ -16,7 +16,7 @@ export default function FloatingNavButtons({
         className="w-1/2 border-2 border-[#F11A23] bg-transparent text-white font-bold py-3 shadow-xl text-base flex items-center justify-center gap-2 active:scale-95 transition-transform"
         onClick={onSpecialsClick}
       >
-        <Star className="w-5 h-5" />
+        <Calendar className="w-5 h-5" />
         Specials
       </button>
       <div className="w-0.5 h-10 bg-white/40 mx-1"></div>

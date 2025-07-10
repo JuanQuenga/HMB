@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-gradient-to-br from-[#F11A23] to-[#D4151E] shadow-lg sticky top-0 z-50">
+    <nav className="w-full bg-gradient-to-br from-[#E0151D] to-[#B81219] shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -56,11 +56,11 @@ export default function Navbar() {
           </div>
 
           {/* Social Media & Contact Buttons */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-2">
             {/* Phone */}
             <a
               href="tel:+16702341726"
-              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
+              className="flex items-center justify-center w-10 h-10 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
               aria-label="Call us"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -71,10 +71,10 @@ export default function Navbar() {
             {/* Email */}
             <a
               href="mailto:info@hermansmodernbakery.com"
-              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
+              className="flex items-center justify-center w-10 h-10 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
               aria-label="Email us"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
               </svg>
             </a>
@@ -84,11 +84,24 @@ export default function Navbar() {
               href="https://www.facebook.com/hermansmodernbakery"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
+              className="flex items-center justify-center w-10 h-10 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
               aria-label="Facebook"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                width="256"
+                height="256"
+                viewBox="0 0 256 256"
+                className="w-5 h-5"
+              >
+                <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                  <path
+                    d="M 83.254 90 H 59.253 c -1.104 0 -2 -0.896 -2 -2 V 54.696 c 0 -1.104 0.896 -2 2 -2 h 9.42 l 1.158 -8.979 H 59.253 c -1.104 0 -2 -0.896 -2 -2 v -8.286 c 0 -3.571 0.874 -8.319 8.432 -8.319 l 4.873 -0.002 v -7.801 c -1.871 -0.154 -4.797 -0.32 -8.015 -0.32 c -9.2 0 -14.693 5.666 -14.693 15.156 v 9.572 c 0 1.104 -0.896 2 -2 2 h -9.208 v 8.979 h 9.208 c 1.104 0 2 0.896 2 2 V 88 c 0 1.104 -0.896 2 -2 2 H 6.747 C 3.027 90 0 86.974 0 83.253 V 6.747 C 0 3.026 3.027 0 6.747 0 h 76.507 C 86.974 0 90 3.026 90 6.747 v 76.506 C 90 86.974 86.974 90 83.254 90 z M 61.253 86 h 22.001 C 84.769 86 86 84.768 86 83.253 V 6.747 C 86 5.232 84.769 4 83.254 4 H 6.747 C 5.232 4 4 5.232 4 6.747 v 76.506 C 4 84.768 5.232 86 6.747 86 H 43.85 V 56.696 h -9.208 c -1.104 0 -2 -0.896 -2 -2 V 41.717 c 0 -1.104 0.896 -2 2 -2 h 9.208 v -7.572 c 0 -11.816 7.163 -19.156 18.693 -19.156 c 4.763 0 8.981 0.356 10.278 0.529 c 0.994 0.132 1.736 0.98 1.736 1.982 v 11.608 c 0 1.104 -0.895 2 -1.999 2 l -6.873 0.003 c -3.995 0 -4.433 1.383 -4.433 4.319 v 6.286 h 10.853 c 0.575 0 1.122 0.248 1.502 0.679 c 0.38 0.432 0.555 1.006 0.481 1.577 l -1.674 12.979 c -0.129 0.997 -0.978 1.744 -1.983 1.744 h -9.179 V 86 z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
             </a>
 
@@ -97,10 +110,10 @@ export default function Navbar() {
               href="https://www.instagram.com/hermansmodernbakery/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-9 h-9 p-0 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
+              className="flex items-center justify-center w-10 h-10 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110"
               aria-label="Instagram"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
               </svg>
             </a>
@@ -162,14 +175,14 @@ export default function Navbar() {
               ))}
 
               {/* Mobile Social Media & Contact */}
-              <div className="flex justify-center space-x-4 pt-4 border-t border-white/20">
+              <div className="flex justify-center space-x-2 pt-4 border-t border-white/20">
                 <a
                   href="tel:+16702341726"
-                  className="p-3 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+                  className="flex items-center justify-center w-10 h-10 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
                   aria-label="Call us"
                 >
                   <svg
-                    className="w-6 h-6"
+                    className="w-5 h-5"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -178,11 +191,11 @@ export default function Navbar() {
                 </a>
                 <a
                   href="mailto:info@hermansmodernbakery.com"
-                  className="p-3 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+                  className="flex items-center justify-center w-10 h-10 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
                   aria-label="Email us"
                 >
                   <svg
-                    className="w-6 h-6"
+                    className="w-5 h-5"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -193,26 +206,35 @@ export default function Navbar() {
                   href="https://www.facebook.com/hermansmodernbakery"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+                  className="flex items-center justify-center w-10 h-10 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
                   aria-label="Facebook"
                 >
                   <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    width="256"
+                    height="256"
+                    viewBox="0 0 256 256"
+                    className="w-5 h-5"
                   >
-                    <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0" />
+                    <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                      <path
+                        d="M 83.254 90 H 59.253 c -1.104 0 -2 -0.896 -2 -2 V 54.696 c 0 -1.104 0.896 -2 2 -2 h 9.42 l 1.158 -8.979 H 59.253 c -1.104 0 -2 -0.896 -2 -2 v -8.286 c 0 -3.571 0.874 -8.319 8.432 -8.319 l 4.873 -0.002 v -7.801 c -1.871 -0.154 -4.797 -0.32 -8.015 -0.32 c -9.2 0 -14.693 5.666 -14.693 15.156 v 9.572 c 0 1.104 -0.896 2 -2 2 h -9.208 v 8.979 h 9.208 c 1.104 0 2 0.896 2 2 V 88 c 0 1.104 -0.896 2 -2 2 H 6.747 C 3.027 90 0 86.974 0 83.253 V 6.747 C 0 3.026 3.027 0 6.747 0 h 76.507 C 86.974 0 90 3.026 90 6.747 v 76.506 C 90 86.974 86.974 90 83.254 90 z M 61.253 86 h 22.001 C 84.769 86 86 84.768 86 83.253 V 6.747 C 86 5.232 84.769 4 83.254 4 H 6.747 C 5.232 4 4 5.232 4 6.747 v 76.506 C 4 84.768 5.232 86 6.747 86 H 43.85 V 56.696 h -9.208 c -1.104 0 -2 -0.896 -2 -2 V 41.717 c 0 -1.104 0.896 -2 2 -2 h 9.208 v -7.572 c 0 -11.816 7.163 -19.156 18.693 -19.156 c 4.763 0 8.981 0.356 10.278 0.529 c 0.994 0.132 1.736 0.98 1.736 1.982 v 11.608 c 0 1.104 -0.895 2 -1.999 2 l -6.873 0.003 c -3.995 0 -4.433 1.383 -4.433 4.319 v 6.286 h 10.853 c 0.575 0 1.122 0.248 1.502 0.679 c 0.38 0.432 0.555 1.006 0.481 1.577 l -1.674 12.979 c -0.129 0.997 -0.978 1.744 -1.983 1.744 h -9.179 V 86 z"
+                        fill="currentColor"
+                      />
+                    </g>
                   </svg>
                 </a>
                 <a
                   href="https://www.instagram.com/hermansmodernbakery/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
+                  className="flex items-center justify-center w-10 h-10 text-white hover:text-[#FCF4E0] hover:bg-white/10 rounded-lg transition-all duration-300"
                   aria-label="Instagram"
                 >
                   <svg
-                    className="w-6 h-6"
+                    className="w-5 h-5"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >

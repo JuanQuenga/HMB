@@ -41,16 +41,16 @@ export default function LunchSpecials({ forceMobile }: Props) {
   };
 
   return (
-    <section className="w-full flex flex-col items-center py-8 px-2 md:px-0">
-      <div className="text-lg text-gray-700 mb-1 text-center">
+    <section className="w-full flex flex-col items-center py-4 md:py-8 pb-12 md:pb-0 px-2 md:px-0">
+      <div className="text-base md:text-lg text-gray-700 mb-1 text-center">
         {cafeData.availability}
       </div>
-      <div className="text-base text-gray-500 mb-6 text-center">
+      <div className="text-sm md:text-base text-gray-500 mb-3 md:mb-6 text-center">
         {cafeData.date} &bull;{" "}
         <span className="font-bold text-[#F11A23]">{cafeData.price}</span>
       </div>
       {/* Mobile-collapsed style: vertical accordion */}
-      <div className="w-full space-y-3 pb-4">
+      <div className="w-full space-y-2 md:space-y-3 pb-2 md:pb-4">
         {cafeData.days.map((day) => (
           <LunchSpecialDayCard
             key={day.day}
@@ -62,7 +62,7 @@ export default function LunchSpecials({ forceMobile }: Props) {
           />
         ))}
       </div>
-      <div className="mt-4 text-sm text-gray-500 text-center">
+      <div className="mt-2 md:mt-4 text-xs md:text-sm text-gray-500 text-center">
         {cafeData.note}
       </div>
     </section>
