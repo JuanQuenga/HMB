@@ -91,7 +91,7 @@ export default function ProductsPage() {
                 onValueChange={handleTabChange}
                 className="w-full"
               >
-                <TabsList className="mb-8 w-full flex flex-wrap gap-3 justify-center bg-transparent sticky top-0 z-30 bg-white shadow-md">
+                <TabsList className="mb-8 w-full flex flex-wrap gap-3 justify-center bg-transparent sticky top-0 z-30 ">
                   {productCategories.map((cat) => (
                     <TabsTrigger
                       key={cat.category}
