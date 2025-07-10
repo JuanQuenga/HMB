@@ -44,7 +44,7 @@ export default function CafePage() {
     <div className="min-h-screen bg-[#FCF4E0]">
       {/* Hero Section */}
       <section className="relative w-full bg-gradient-to-br from-black/90 to-[#000000] py-10 sm:py-20 lg:py-32 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-black/80"></div>
         <div className="absolute inset-0 bg-[url('/assets/photos/cafe-2.jpg')] bg-cover bg-center opacity-50 bg-[#FCF4E0]"></div>
         <div className="relative max-w-4xl mx-auto px-2 sm:px-4 lg:px-8 z-10">
           <div className="flex justify-center mb-6 sm:mb-8">
