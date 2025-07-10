@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import FoodItems from "@/components/FoodItems";
+import CafeSection from "@/components/CafeSection";
 import BakeryMap from "@/components/BakeryMap";
 import AboutUs from "@/components/AboutUs";
 import { productCategories } from "@/data/products";
@@ -13,17 +13,18 @@ export default function Home() {
         <section className="w-full bg-white">
           <Hero />
         </section>
-        <section className="w-full bg-gradient-to-b from-white to-[#FCF4E0]">
-          <FoodItems />
+        <section className="w-full bg-gradient-to-t from-[#FCF4E0] to-white">
+          <CafeSection />
         </section>
 
         {/* Products Section */}
-        <section className="w-full bg-gradient-to-b from-[#FCF4E0] to-white py-12">
+        <section className="w-full bg-gradient-to-t from-white to-[#FCF4E0]">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-5xl font-dela-gothic-one text-[#F11A23] mb-4">
                 Featured Products
               </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#F11A23] to-[#D4151E] mx-auto mb-6 rounded-full" />
               <p className="text-gray-700 text-lg mb-4">
                 A taste of our best sellers
               </p>
@@ -99,27 +100,27 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full bg-gradient-to-b from-white to-[#FCF4E0] py-8">
+        <section className="w-full bg-gradient-to-t from-[#FCF4E0] to-white">
           <BakeryMap />
         </section>
-        <section className="w-full bg-gradient-to-b from-[#FCF4E0] to-white py-8">
+        <section className="w-full bg-gradient-to-t from-white to-[#FCF4E0]">
           <AboutUs />
         </section>
         <section
           id="feedback"
-          className="w-full bg-gradient-to-b from-white to-[#FCF4E0] py-8"
+          className="w-full bg-gradient-to-t from-[#FCF4E0] to-white pt-12 pb-12"
         >
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-5xl font-dela-gothic-one text-[#F11A23] mb-4">
-                80th Anniversary Highlights
+                80th Anniversary
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-[#F11A23] to-[#D4151E] mx-auto mb-6 rounded-full" />
             </div>
             <div className="flex flex-col md:flex-row items-center gap-8">
               {/* Text/Link Left */}
               <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-dela-gothic-one text-[#F11A23] mb-2">
+                <h3 className="text-2xl font-dela-gothic-one text-black mb-2">
                   Celebrating 80 Years of Community
                 </h3>
                 <p className="text-gray-700 text-lg mb-4 max-w-xl md:mx-0 mx-auto">

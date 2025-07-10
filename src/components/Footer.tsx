@@ -6,7 +6,11 @@ const footerLinks = [
   { label: "Products", href: "/products" },
   { label: "Tan Marikita's Café", href: "/cafe" },
   { label: "Place An Order", href: "/order" },
+];
+
+const extraLinks = [
   { label: "80th Anniversary", href: "/80th-anniversary" },
+  { label: "Our History", href: "/history" },
   { label: "Our Family", href: "/family" },
 ];
 
@@ -61,19 +65,30 @@ export default function Footer() {
             <div className="pb-6">
               <a
                 href="/feedback"
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                className="text-sm leading-6 text-white text-center lg:text-left block hover:text-white/80 transition-colors duration-300"
               >
                 Customer Feedback
               </a>
+              <nav className="flex flex-col space-y-2 mt-4">
+                {extraLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="text-white/80 hover:text-white transition-colors duration-300 text-center lg:text-left"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
             </div>
           </div>
 
-          {/* Contact Information */}
+          {/* Contact Information & Social Media */}
           <div className="lg:col-span-1">
             <h4 className="text-lg font-dela-gothic-one font-bold mb-4 text-center lg:text-left">
               Contact Us
             </h4>
-            <div className="space-y-3">
+            <div className="space-y-3 mb-6">
               <a
                 href="tel:+16702341726"
                 className="flex items-center justify-center lg:justify-start gap-2 text-white/80 hover:text-white transition-colors duration-300 group"
@@ -116,10 +131,6 @@ export default function Footer() {
                 <span className="text-sm">5040 Chalan Tun Herman Pan</span>
               </a>
             </div>
-          </div>
-
-          {/* Social Media */}
-          <div className="lg:col-span-1">
             <h4 className="text-lg font-dela-gothic-one font-bold mb-4 text-center lg:text-left">
               Follow Us
             </h4>

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import LunchSpecialDayCard from "./LunchSpecialDayCard";
 import cafeData from "../data/cafe.json";
@@ -41,9 +42,6 @@ export default function LunchSpecials({ forceMobile }: Props) {
 
   return (
     <section className="w-full flex flex-col items-center py-8 px-2 md:px-0">
-      <h2 className="text-3xl md:text-4xl font-dela-gothic-one text-[#F11A23] mb-2 text-center drop-shadow">
-        {cafeData.subtitle}
-      </h2>
       <div className="text-lg text-gray-700 mb-1 text-center">
         {cafeData.availability}
       </div>

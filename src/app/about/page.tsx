@@ -35,9 +35,25 @@ export default function AboutPage() {
       <div className="max-w-3xl mx-auto mt-6 sm:mt-8 mb-8 sm:mb-12 px-2 sm:px-4">
         <a
           href="/80th-anniversary"
-          className="block bg-gradient-to-br from-[#F11A23] to-[#D4151E] text-white text-base sm:text-xl md:text-2xl font-bold font-dela-gothic-one rounded-2xl shadow-lg px-4 sm:px-8 py-4 sm:py-6 text-center hover:scale-105 transition-transform duration-300 border-4 border-white"
+          className="block bg-gradient-to-br from-[#F11A23] to-[#D4151E] text-white text-base sm:text-xl md:text-2xl font-bold font-dela-gothic-one rounded-2xl shadow-xl px-4 sm:px-8 py-4 sm:py-6 text-center hover:scale-105 transition-transform duration-300 hover:shadow-2xl"
         >
-          🎉 Celebrating 80 Years! 🎉
+          <div className="flex items-center justify-center gap-3">
+            <svg
+              className="w-6 h-6 sm:w-8 sm:h-8"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg>
+            <span>Celebrating 80 Years!</span>
+            <svg
+              className="w-6 h-6 sm:w-8 sm:h-8"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg>
+          </div>
         </a>
       </div>
 

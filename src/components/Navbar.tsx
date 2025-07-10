@@ -7,7 +7,7 @@ import { useState } from "react";
 const navLinks = [
   { label: "About Us", href: "/about" },
   { label: "Tan Marikita's Café", href: "/cafe" },
-  { label: "Products", href: "/products" },
+  { label: "Our Products", href: "/products" },
 ];
 
 export default function Navbar() {
@@ -148,7 +148,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-white/20">
+          <div className="lg:hidden">
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
                 <Link
@@ -232,9 +232,6 @@ export default function Navbar() {
           </div>
         )}
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
     </nav>
   );
 }
